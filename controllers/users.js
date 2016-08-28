@@ -37,4 +37,56 @@ router.get('/:id', function(req, res) {
   });
 });
 
+//POST /user
+//Insert the user in the database
+router.post('/user', function(req, res) {
+  var new_user = new User(req.body);
+  new_user.save(function(err) {
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        message: 'Error creating user: ' + err
+      });
+    }
+    res.status(201).json(new_user);
+  });
+});
+
+//PUT /user/:id
+//Update the user and return the updated user object
+router.put('/:id', function(req, res) {
+  User.findOneAndUpdate({
+    _id: req.params.id
+  }, { $set: req.body }, { new: true }, function(err, updatedUserObj) {
+    if (err) {
+      return res.status(500).json({
+        success: false,
+        message: 'Error updating user: ' + err
+      });
+    }
+    if (!updatedUserObj) {
+      return res.status(404).end();
+    }
+    res.status(200).json(updatedUserObj);
+  });
+});
+
+//Delete /user/:id
+//Delete the user by id
+router.delete('/:id', function(req, res) {
+  User.remove({
+    _id: req.params.id
+  }, function(err, result) {
+    if (err) {
+      return res.status(500).json({
+        error: "Error deleting user: " + err
+      });
+    } else {
+      res.status(204).json(result);
+    }
+  });
+});
+
+
+
 module.exports = router;
