@@ -31,6 +31,9 @@ To get started, you'll need to have the following requirements installed
 
 See [API.md](API.md) for details.
 
+## Frontend
+Internet connection is required to render the frontend properly as the frontend uses CDN links of angularjs and bootstrap.
+
 ## SonarQube
 In addition to ESLint, we've also included some configuration for SonarQube in `sonar-project.properties`.
 
