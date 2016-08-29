@@ -27,15 +27,15 @@ var new_user = {
   "email": "rachel.robertson@example.com",
   "username": "rachel505",
   "password": "robertsonrach199",
-  "salt": "lypI10wj",
-  "md5": "bbdd6140e188e3bf68ae7ae67345df65",
-  "sha1": "4572d25c99aa65bbf0368168f65d9770b7cacfe6",
-  "sha256": "ec0705aec7393e2269d4593f248e649400d4879b2209f11bb2e012628115a4eb",
+  "salt": "",
+  "md5": "",
+  "sha1": "",
+  "sha256": "",
   "registered": 1237176893,
   "dob": 932871968,
   "phone": "031-541-9181",
   "cell": "081-647-4650",
-  "PPS": "3302243T",
+  "PPS": "3304543T",
   "picture": {
     "large": "https://randomuser.me/api/portraits/women/60.jpg",
     "medium": "https://randomuser.me/api/portraits/med/women/60.jpg",
@@ -60,15 +60,15 @@ var new_user_updated = {
   "email": "rachel.robertson@example.com",
   "username": "rachel505",
   "password": "robertsonrach222",
-  "salt": "lypI10wj",
-  "md5": "bbdd6140e188e3bf68ae7ae67345df65",
-  "sha1": "4572d25c99aa65bbf0368168f65d9770b7cacfe6",
-  "sha256": "ec0705aec7393e2269d4593f248e649400d4879b2209f11bb2e012628115a4eb",
+  "salt": "",
+  "md5": "",
+  "sha1": "",
+  "sha256": "",
   "registered": 1237176893,
   "dob": 932871968,
   "phone": "041-545-9171",
   "cell": "081-647-4650",
-  "PPS": "3302243T",
+  "PPS": "3304543T",
   "picture": {
     "large": "https://randomuser.me/api/portraits/women/60.jpg",
     "medium": "https://randomuser.me/api/portraits/med/women/60.jpg",
@@ -76,8 +76,8 @@ var new_user_updated = {
   }
 };
 
+//to keep track of object id of the created user
 var new_user_id;
-
 
 describe('Users', function() {
 
@@ -137,6 +137,7 @@ describe('Users', function() {
           expect(res.body).to.be.a('object');
           res.should.have.status(201);
           expect(res.body.name.first).to.be.a('string');
+          expect(res.body.name.first).to.be.equal(new_user.name.first);
           new_user_id = res.body._id;
           done();
         });
@@ -152,6 +153,7 @@ describe('Users', function() {
           res.should.have.status(200);
           expect(res.body).to.be.a('object');
           expect(res.body.name.first).to.be.a('string');
+          expect(res.body.name.first).to.be.equal(new_user.name.first);
           done();
         });
     });
@@ -168,6 +170,7 @@ describe('Users', function() {
           expect(res.body).to.be.a('object');
           res.should.have.status(200);
           expect(res.body.name.first).to.be.a('string');
+          //check if the updated details returned match the updated details sent
           expect(res.body.password).to.be.equal(new_user_updated.password);
           expect(res.body.phone).to.be.equal(new_user_updated.phone);
           done();
