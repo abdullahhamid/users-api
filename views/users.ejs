@@ -8,7 +8,7 @@
         </div>
       </div>
       <div>
-        <button class="btn btn-default" ng-click="addUser()">
+        <button class="btn btn-default" ng-click="addUserForm()">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Contact</button>
       </div>
     </div>
@@ -24,7 +24,7 @@
       </thead>
       <tbody>
         <tr ng-repeat="user in users | filter:contactSearch">
-          <td> Photo </td>
+          <td> <img alt="User Pic" src="http://www.w3schools.com/howto/img_avatar.png" class="img-circle img-responsive" width="5%" height ="5%"> </td>
           <td>{{user.name.first}} {{user.name.last}}</td>
           <td>
             <div class="pull-right">

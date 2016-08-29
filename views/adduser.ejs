@@ -7,15 +7,21 @@
         <form name="form" ng-submit="addUserContact()" role="form" novalidate>
           <div class="form-group">
             <div class="form-group">
+              <label for="title" class="control-label pull-left">Title</label>
+              <input type="text" class="form-control" id="title" name="name" placeholder="Title" ng-model="addUserObj.name.title">
               <label for="fname" class="control-label pull-left">First Name</label>
               <input type="text" class="form-control" id="fname" name="name" placeholder="First Name" ng-model="addUserObj.name.first">
               <label for="lname" class="control-label pull-left">Last Name</label>
               <input type="text" class="form-control" id="lname" name="name" placeholder="Last Name" ng-model="addUserObj.name.last">
               <label for="email" class="control-label pull-left">Email</label>
               <input type="text" class="form-control" id="email" name="email" placeholder="Email" ng-model="addUserObj.email">
+              <label for="phone" class="control-label pull-left">Gender</label>
+              <input type="text" class="form-control" id="gender" name="gender" placeholder="gender" ng-model="addUserObj.gender">
+              <label for="gender" class="control-label pull-left">Date of Birth</label>
+              <input type="text" class="form-control" id="dob" name="gender" placeholder="dob" ng-model="addUserObj.dob">
               <label for="phone" class="control-label pull-left">Phone</label>
               <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" ng-model="addUserObj.phone">
-              <label for="cell" class="control-label pull-left">Phone</label>
+              <label for="cell" class="control-label pull-left">Cell</label>
               <input type="text" class="form-control" id="cell" name="cell" placeholder="Cell" ng-model="addUserObj.cell">
             </div>
             <button type="submit" class="btn btn-danger pull-right">Add Contact</button>

@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h3>Edit Contact</h3>
+    </div>
+    <div class="panel-body">
+      <div class="col-md-8 col-md-offset-2">
+        <form name="form" ng-submit="editUserContact()" role="form" novalidate>
+          <div class="form-group">
+            <div class="form-group">
+              <label for="title" class="control-label pull-left">Title</label>
+              <input type="text" class="form-control" id="title" name="name" placeholder="Title" ng-model="userObj.name.title">
+              <label for="fname" class="control-label pull-left">First Name</label>
+              <input type="text" class="form-control" id="fname" name="name" placeholder="First Name" ng-model="userObj.name.first">
+              <label for="lname" class="control-label pull-left">Last Name</label>
+              <input type="text" class="form-control" id="lname" name="name" placeholder="Last Name" ng-model="userObj.name.last">
+              <label for="email" class="control-label pull-left">Email</label>
+              <input type="text" class="form-control" id="email" name="email" placeholder="Email" ng-model="userObj.email">
+              <label for="phone" class="control-label pull-left">Gender</label>
+              <input type="text" class="form-control" id="gender" name="gender" placeholder="gender" ng-model="userObj.gender">
+              <label for="gender" class="control-label pull-left">Date of Birth</label>
+              <input type="text" class="form-control" id="dob" name="gender" placeholder="dob" ng-model="userObj.dob">
+              <label for="phone" class="control-label pull-left">Phone</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" ng-model="userObj.phone">
+              <label for="cell" class="control-label pull-left">Cell</label>
+              <input type="text" class="form-control" id="cell" name="cell" placeholder="Cell" ng-model="userObj.cell">
+            </div>
+            <button type="submit" class="btn btn-danger pull-right">Edit Contact</button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
