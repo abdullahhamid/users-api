@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"><span class="glyphicon glyphicon-search" aria-hidden="true"></i></div>
+          <input type="text" class="form-control" placeholder="Search Contact" ng-model="contactSearch">
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-default" ng-click="addUser()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add Contact</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="user in users | filter:contactSearch">
+          <td> Photo </td>
+          <td>{{user.name.first}} {{user.name.last}}</td>
+          <td>
+            <div class="pull-right">
+              <button class="btn btn-default" ng-click="viewUser(user._id)">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>View</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

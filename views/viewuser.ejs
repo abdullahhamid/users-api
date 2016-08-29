@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <td>{{userObj.email}}</td>
+        <td>
+          <div class="pull-right">
+            <button class="btn btn-md" ng-click="deleteUser(userObj._id)">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>Delete</button>
+          </div>
+        </td>
+      </tbody>
+    </table>
+  </div>
+</div>

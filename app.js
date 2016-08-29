@@ -36,6 +36,12 @@ app.get('/', function(req, res, err) { // eslint-disable-line no-unused-vars
   });
 });
 
+app.get('/viewuser', function(req, res, err) { // eslint-disable-line no-unused-vars
+
+  return res.render('viewuser.ejs', {});
+});
+
+
 // See the User Controller for `/users` routes
 app.use('/users', userController);
 
