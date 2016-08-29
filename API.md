@@ -203,4 +203,54 @@ Returns a list of Users
   });
   ```
 
+  **Deletes User**
+  ----
+    Deletes the user.
+
+  * **URL**
+
+    `/users/:id`
+
+  * **Method:**
+
+    `DELETE`
+
+  *  **URL Params**
+
+     **Required:**
+
+     `id=[string]`
+
+  * **Data Params**
+
+    None
+
+  * **Success Response:**
+
+    * **Code:** 204 <br />
+      **Content:**
+
+
+  * **Error Response:**
+
+    * **Code:** 500 INTERNAL SERVER ERROR <br />
+      **Content:**
+
+      ```javascript
+      { "error": "Error deleting user" }
+      ```
+
+  * **Sample Call:**
+
+    ```javascript
+    $.ajax({
+      url: "/users/1",
+      dataType: "json",
+      type : "DELETE",
+      success : function(r) {
+        console.log(r);
+      }
+    });
+    ```
+
 Inspired by https://gist.github.com/iros/3426278

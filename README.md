@@ -1,6 +1,6 @@
 # Users API
 
-This sample project will give you a minimal users RESTful API to build your contact list template against. It only implements user listing and reading - feel free to add other actions (e.g. update, delete, create) as you see fit. It is built using JavaScript/Node.js (our language of choice), ExpressJS (a small, lightweight web MVC framework) & Mongoose (a MongoDB object modelling library).
+This project builds on the sample users RESTful API https://github.com/feedhenry/users-api. It includes CRUD operations and an angularjs frontend with bootstrap.
 
 ## Pre-requisites
 
@@ -16,7 +16,7 @@ To get started, you'll need to have the following requirements installed
 <sup>2</sup>See https://docs.mongodb.com/manual/administration/install-community/ for installation guides
 
 ## Getting started
-	
+
 	# Ensure `mongod` is running, either as a service or in another shell
 	git clone <this repo>
 	npm install
