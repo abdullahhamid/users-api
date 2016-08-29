@@ -48,7 +48,7 @@ if (require.main === module) {
   mongoose.connect('mongodb://localhost/users');
 
   // Only listen when app.js is run - acceptance tests will listen on another port
-  app.listen(8000, function() {
+  app.listen(process.env.PORT || 8000, function() {
     logger.info('Listening at http://localhost:8000 - see here for API docs');
   });
 }
