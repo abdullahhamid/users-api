@@ -19,6 +19,7 @@
           $scope.usersLoaded = false;
         });
 
+        //function to get the user by id and display the user
         $scope.viewUser = function (userid) {
           $http({
             method: 'GET',
@@ -36,12 +37,14 @@
           });
         };
 
+        //function to display the add user form
         $scope.addUserForm = function () {
           $scope.showUsers = false;
           $scope.showUser = false;
           $scope.showAddUserForm = true;
         };
 
+        //function to display the edit user form
         $scope.editUserForm = function () {
           $scope.showUsers = false;
           $scope.showUser = false;
@@ -53,6 +56,7 @@
           $window.location.reload();
         };
 
+        //function to post the user to be created
         $scope.addUserContact = function () {
           $scope.showAddUserForm = false;
           var userDetails = JSON.stringify($scope.addUserObj);
@@ -71,6 +75,7 @@
           });
         };
 
+        //function to edit the user and send the updated details to the server
         $scope.editUserContact = function () {
           $scope.showEditUserForm = false;
           var userid = $scope.userObj._id;
@@ -90,6 +95,7 @@
           });
         };
 
+        //fucntion to delete the user
         $scope.deleteUser = function (userid) {
           $http({
             method: 'DELETE',
