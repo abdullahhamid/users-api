@@ -13,7 +13,7 @@ var User = mongoose.model('User', {
   sha1: String,
   sha256: String,
   registered: Number,
-  dob: Number,
+  dob: String,
   phone: String,
   cell: String,
   PPS: String,

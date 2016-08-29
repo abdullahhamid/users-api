@@ -1,18 +1,11 @@
 <html ng-app="app">
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
     <script>
-      var app = angular.module('app', ['ngCookies']);
-      app.controller('UserController', ['$scope','$http', '$cookies', '$window' , function($scope, $http, $cookies, $window) {
+      var app = angular.module('app', []);
+      app.controller('UserController', ['$scope','$http', '$window' , function($scope, $http, $window) {
         $scope.addUserObj = {};
         $scope.userObj = {};
-        $scope.userLoaded = false;
-        $scope.showUsers = false;
-        $scope.showUser = false;
-        $scope.errorUser = false;
-        $scope.showAddUserForm = false;
         $http({
           method: 'GET',
           url: '/users'
@@ -41,8 +34,6 @@
             $scope.errorUser = "Error Loading Contacts:" + error;
             $scope.userLoaded = false;
           });
-          //$cookies.put("userid", userid);
-          //$location.path('/viewuser')
         };
 
         $scope.addUserForm = function () {
@@ -56,6 +47,10 @@
           $scope.showUser = false;
           $scope.showAddUserForm = false;
           $scope.showEditUserForm = true;
+        };
+
+        $scope.reloadPage = function () {
+          $window.location.reload();
         };
 
         $scope.addUserContact = function () {
@@ -73,7 +68,6 @@
             $window.location.reload();
           }, function (error) {
             $scope.errorUser = "Error Loading Contacts:" + error;
-            //$scope.userLoaded = false;
           });
         };
 

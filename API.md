@@ -302,30 +302,39 @@ Returns a list of Users
       }
       ```
 
+    * **Error Response:**
 
-      **Update User**
+      * **Code:** 500 INTERNAL SERVER ERROR <br />
+        **Content:**
+
+          ```javascript
+          { "error": "Error creating user" }
+          ```
+
+
+  **Update User**
       ----
         Returns JSON data about the updated user.
 
-      * **URL**
+    * **URL**
 
         `/users/user`
 
-      * **Method:**
+    * **Method:**
 
         `PUT`
 
-      *  **URL Params**
+    *  **URL Params**
 
          **Required:**
 
          `id=[string]`
 
-      * **Data Params**
+    * **Data Params**
 
         JSON object with the details about the user to update.
 
-        **Content:**
+      **Content:**
 
         ```javascript
         {
@@ -361,9 +370,9 @@ Returns a list of Users
         }
         ```
 
-      * **Success Response:**
+    * **Success Response:**
 
-        * **Code:** 200 <br />
+      * **Code:** 200 <br />
           **Content:**
 
           ```javascript
@@ -408,7 +417,7 @@ Returns a list of Users
       **Content:**
 
       ```javascript
-      { "error": "Error creating user" }
+      { "error": "Error updating user" }
       ```
       **Code:** 404 NOT FOUND <br />
 
