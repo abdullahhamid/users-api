@@ -1,6 +1,6 @@
 ## API Documentation
 
-This sample project will give you a small RESTful API to build your template against. It is built using JavaScript/Node.js (our language of choice), ExpressJS (a small, lightweight web MVC framework) & Mongoose (a MongoDB object modelling library).
+This project builds on the sample users RESTful API, available at: https://github.com/feedhenry/users-api 
 
 **List Users**
 ----

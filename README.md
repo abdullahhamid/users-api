@@ -1,6 +1,6 @@
 # Users API
 
-This project builds on the sample users RESTful API https://github.com/feedhenry/users-api. It includes CRUD operations and an angularjs frontend with bootstrap.
+This project builds on the sample users RESTful API, available at: https://github.com/feedhenry/users-api. It includes CRUD operations and an angularjs frontend application with bootstrap.
 
 ## Pre-requisites
 
